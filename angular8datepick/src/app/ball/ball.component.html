@@ -14,7 +14,7 @@
     </mat-form-field>
     <mat-form-field>
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker" [value]="contactDate"  (dateChange)="addEvent('change', $event)">
+        <input matInput [matDatepicker]="picker"  [(ngModel)]="user.contactDate" [value]="user.contactDate"  (dateChange)="addEvent('change', $event)">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>

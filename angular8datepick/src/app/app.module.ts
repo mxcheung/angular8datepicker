@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatNativeDateModule } from '@angular/material/core';
 
+
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -37,7 +38,7 @@ import { MatSelectModule } from '@angular/material/select';
     BallModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MatNativeDateModule, MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

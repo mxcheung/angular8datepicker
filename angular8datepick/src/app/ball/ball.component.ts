@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {MatDatepickerInputEvent} from '@angular/material/datepicker';
-
+import {User} from "../shared/models/user.model";
 
 @Component({
   selector: 'app-ball',
@@ -14,6 +14,7 @@ export class BallComponent implements OnInit {
   startDate: "1/1/2018";
   contactName: string = "batman";
   contactDate: Date = new Date();
+  user: User;
 
   date = new FormControl(new Date());
   highway = new FormControl(new Date());
@@ -21,12 +22,15 @@ export class BallComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.user  = new User();
+    this.user.contactDate = new Date();
   }
 
 
   onClick() {
     this.contactName = "superman";
-    this.contactDate = new Date("2019-12-15");
+   // this.contactDate = new Date("2019-12-15");
+    this.user.contactDate =  new Date("2019-12-15")
     alert("You Clicked Me!");
   }
 
